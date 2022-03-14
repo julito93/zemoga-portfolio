@@ -25,6 +25,11 @@ public class PortfolioController {
         model.addAttribute("name",portfolio.getName());
         model.addAttribute("experience",portfolio.getExperience());
         model.addAttribute("profileImage",portfolio.getImagePath());
-        return "portfolio";
+        model.addAttribute("phoneNumber",portfolio.getPhone());
+        model.addAttribute("email",portfolio.getEmail());
+        model.addAttribute("zipCode",portfolio.getZipCode());
+        model.addAttribute("address",portfolio.getAddress());
+        model.addAttribute("twitterUser",portfolio.getTwitterUser());
+        return "index";
     }
 }

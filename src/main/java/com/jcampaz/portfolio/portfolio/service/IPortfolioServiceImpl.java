@@ -1,6 +1,5 @@
 package com.jcampaz.portfolio.portfolio.service;
 
-import com.jcampaz.portfolio.portfolio.controller.PortfolioController;
 import com.jcampaz.portfolio.portfolio.model.Portfolio;
 import com.jcampaz.portfolio.portfolio.repo.IPortfolioRepo;
 import org.slf4j.Logger;
@@ -29,5 +28,17 @@ public class IPortfolioServiceImpl implements IPortfolioService{
     @Override
     public List<Portfolio> findAll(){
         return portfolioRepo.findAll();
+    }
+
+    @Override
+    public Portfolio savePortfolio(Portfolio portfolio)
+    {
+     return portfolioRepo.save(portfolio);
+    }
+
+
+    public void getTweets()
+    {
+
     }
 }

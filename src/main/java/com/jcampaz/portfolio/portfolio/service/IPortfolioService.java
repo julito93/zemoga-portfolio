@@ -9,4 +9,6 @@ public interface IPortfolioService {
 
     public Optional<Portfolio> findById(long id);
     public List<Portfolio> findAll();
+
+    Portfolio savePortfolio(Portfolio portfolio);
 }

@@ -44,7 +44,7 @@ public class PortfolioController {
         Optional<Portfolio> portfolioFound = portfolioService.findById(id);
 
         if(portfolioFound.isEmpty())
-            return  new ResponseEntity<Portfolio>( HttpStatus.BAD_REQUEST);
+            return  new ResponseEntity<Portfolio>( HttpStatus.NOT_FOUND);
         else
             return  new ResponseEntity<Portfolio>( portfolioFound.get(),HttpStatus.OK);
     }

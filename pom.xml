@@ -57,7 +57,14 @@
 			<version>2.6.4</version>
 		</dependency>
 
-			<!-- ... other dependency elements ... -->
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- ... other dependency elements ... -->
 		<dependency>
 			<groupId>org.springframework.social</groupId>
 			<artifactId>spring-social-web</artifactId>

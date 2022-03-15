@@ -64,6 +64,12 @@
 			<scope>test</scope>
 		</dependency>
 
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
 		<!-- ... other dependency elements ... -->
 		<dependency>
 			<groupId>org.springframework.social</groupId>

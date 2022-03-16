@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 @Controller
@@ -30,6 +31,13 @@ public class PortfolioController {
     @Autowired
     private TimeLineService timeLineService;
 
+    @GetMapping("/")
+    public  String getAllPortfolio(Model model)
+    {
+        List<Portfolio> list = portfolioService.findAll();
+        model.addAttribute("portfolios",list);
+        return "index";
+    }
 
     @GetMapping("/{id}")
     public String getUserPortfolio(Model model, @PathVariable long id) {
@@ -47,7 +55,7 @@ public class PortfolioController {
         model.addAttribute("address", portfolio.getAddress());
         model.addAttribute("twitterUser", portfolio.getTwitterUser());
         model.addAttribute("timeline", timeline);
-        return "index";
+        return "portfolioDetails";
     }
 
     @GetMapping("/portfolio/{id}")
